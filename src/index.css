@@ -63,7 +63,7 @@ button:disabled {
   box-shadow: none;
   transform: none;
 }
-
+/* 
 .hover-effect {
   transition: transform 0.3s ease;
 }
@@ -71,7 +71,7 @@ button:disabled {
 .hover-effect:hover {
   transform: scale(1.2);
   color: var(--secondary-text-color);
-}
+} */
 
 .small-text {
   font-size: 14px;
@@ -82,26 +82,29 @@ button:disabled {
 .page-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0px 18px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    padding: 0px 48px;
+    /* flex-direction: row; */
+    margin: auto;
+    padding: 0px 60px;
   }
 }
 
 .sections-container {
-  width: 100%;
-  max-width: 1152px;
+  /* width: 100%; */
+  max-width: 900px;
+  /* max-width: 1152px; */
   display: flex;
   flex-direction: column;
   gap: 100px;
   justify-content: center;
   margin-top: 80px;
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     flex: 1.2 1 0%;
-  }
+  } */
 }
 
 .section-header-container {
@@ -139,7 +142,7 @@ button:disabled {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0;
 }
@@ -154,6 +157,8 @@ nav {
   top: 0px;
   right: 0px;
 }
+
+/* TO DO: make nav disappear on scroll */
 
 .nav-desktop-container {
   display: none;
@@ -213,11 +218,11 @@ nav {
 /* hero */
 
 .hero-container {
-  width: 100%;
+  max-width: 900px;
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     flex: 1 1 0%;
-  }
+  } */
 }
 
 .hero {
@@ -225,14 +230,14 @@ nav {
   flex-direction: column;
   top: 0px;
   min-height: 100vh;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .hero-headers {
   padding-top: 160px;
   margin-top: auto;
   margin-bottom: auto;
-  max-width: 448px;
+  /* max-width: 448px; */
 }
 
 h1,
@@ -278,24 +283,140 @@ h2 {
   }
 }
 
-.hero-contact-icon-container {
-  display: flex;
+.sidebar-left {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  right: auto;
+  /* right: ${props => (props.orientation === 'left' ? 'auto' : '40px')}; */
+  z-index: 10;
+  color: white;
+
+  @media (max-width: 1080px) {
+    left: 20px;
+    right: auto;
+    /* left: ${props => (props.orientation === 'left' ? '20px' : 'auto')}; */
+    /* right: ${props => (props.orientation === 'left' ? 'auto' : '20px')}; */
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sidebar-left-icons {
+  /* display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 160px;
-  margin-bottom: 160px;
+  margin-bottom: 160px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  /* /*  */
+  /* a { */
+
+  a {
+    padding: 10px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+
+      svg {
+        color: var(--secondary-text-color);
+      }
+    }
+    /* 
+    svg {
+
+    } */
+  }
+  /* } */
 }
 
-.contact-icon {
-  margin: 8px;
+.sidebar-right {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 40px;
+  /* right: ${props => (props.orientation === 'left' ? 'auto' : '40px')}; */
+  z-index: 10;
+  /* color: var(--light-slate); */
+
+  @media (max-width: 1080px) {
+    left: auto;
+    right: 20px;
+    /* left: ${props => (props.orientation === 'left' ? '20px' : 'auto')}; */
+    /* right: ${props => (props.orientation === 'left' ? 'auto' : '20px')}; */
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
+.sidebar-right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: white;
+  }
+
+  a {
+    margin: 20px auto;
+    color: white;
+    padding: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs);
+    line-height: var(--fz-lg);
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--secondary-text-color);
+    }
+  }
+}
+
+/* .contact-icon {
+  margin: 8px;
+} */
 
 /* projects */
 
 .project-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 36px;
   justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;

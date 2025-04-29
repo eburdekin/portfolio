@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Menu from "./components/Nav";
 import Hero from "./sections/Hero";
 // import Experience from "./sections/Experience";
+import ContactIcons from "./components/ContactIcons";
 import Work from "./sections/Work";
 import Skills from "./sections/Skills";
 import Reviews from "./sections/Reviews";
@@ -35,7 +36,18 @@ function App() {
   return (
     <div>
       <div className="page-container">
+        <div className="sidebar-left">
+          <div className="sidebar-left-icons">
+            <ContactIcons />
+          </div>
+        </div>
+        <div className="sidebar-right">
+          <div className="sidebar-right-text">
+            <a href="mailto:eburdekin@proton.me">eileenburdekin@proton.me</a>
+          </div>
+        </div>
         <Menu />
+
         <div className="hero-container">
           <Hero />
         </div>

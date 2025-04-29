@@ -14,9 +14,6 @@ const Hero = () => {
         <FontAwesomeIcon icon={faLocationDot} size="lg" color="#97cfbb" />
         <p>Los Angeles, CA</p>
       </div>
-      <div className="hero-contact-icon-container">
-        <ContactIcons />
-      </div>
     </div>
   );
 };
