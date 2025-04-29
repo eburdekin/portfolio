@@ -13,7 +13,6 @@ type MenuItemsProps = {
 
 const MenuItems: React.FC<MenuItemsProps> = ({ onClick }) => {
   const menuItems: MenuItem[] = [
-    { label: `Home`, url: `/#` },
     { label: `Projects`, url: `/#projects` },
     { label: `Skills`, url: `/#skills` },
     { label: `Reviews`, url: `/#reviews` },
