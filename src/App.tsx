@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./components/Nav";
 import Hero from "./sections/Hero";
-import Experience from "./sections/Experience";
+// import Experience from "./sections/Experience";
 import Work from "./sections/Work";
 import Skills from "./sections/Skills";
 import Reviews from "./sections/Reviews";
@@ -40,7 +40,7 @@ function App() {
           <Hero />
         </div>
         <div className="sections-container">
-          <Experience />
+          {/* <Experience /> */}
           <Work />
           <Skills />
           <Reviews />
