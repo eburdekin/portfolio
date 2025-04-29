@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-headers">
         <h1>Eileen Burdekin</h1>
-        <h3>Web Developer</h3>
+        <h2>Web Developer</h2>
       </div>
       <div className="location">
         <FontAwesomeIcon icon={faLocationDot} size="lg" color="#97cfbb" />

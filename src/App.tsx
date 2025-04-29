@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./components/Nav";
 import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
+import Work from "./sections/Work";
 import Skills from "./sections/Skills";
 import Reviews from "./sections/Reviews";
 import Contact from "./sections/Contact";
@@ -39,7 +40,8 @@ function App() {
           <Hero />
         </div>
         <div className="sections-container">
-          <Projects />
+          <Experience />
+          <Work />
           <Skills />
           <Reviews />
           <Contact />

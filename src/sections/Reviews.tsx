@@ -4,7 +4,9 @@ import ReviewCard from "../components/ReviewCard";
 const Reviews = () => {
   return (
     <section id="reviews">
-      <h2 className="section-header">Reviews</h2>
+      <div className="section-header-container">
+        <h3>Reviews</h3>
+      </div>
       <div className="review-card-container">
         <ReviewCard
           goTo="https://www.linkedin.com/in/eburdekin/"
