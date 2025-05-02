@@ -7,8 +7,8 @@ const projects = [
     projectDesc:
       "Web app created with the L.A. Department of Transportation (LADOT) and L.A. City Planning to help real estate developers design better projects for the city.",
     image: "../images/tdmcalculator.webp",
-    link1: "https://tdm.ladot.lacity.org/about",
-    link2: "https://github.com/hackforla/tdm-calculator",
+    githubLink: "https://github.com/hackforla/tdm-calculator",
+    siteLink: "https://tdm.ladot.lacity.org/about",
     technologies: ["React", "Node", "Express", "Jest"],
   },
   {
@@ -16,8 +16,8 @@ const projects = [
     projectDesc:
       "Free digital tool designed to aid Californians with arrest and conviction histories in clearing their criminal records.",
     image: "../images/expungeassist.webp",
-    link1: "https://expungeassist.org/",
-    link2: "https://github.com/hackforla/expunge-assist",
+    githubLink: "https://github.com/hackforla/expunge-assist",
+    siteLink: "https://expungeassist.org/",
     technologies: ["React", "TypeScript", "MaterialUI", "Jest"],
   },
 ];

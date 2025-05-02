@@ -11,14 +11,18 @@
 /* variables */
 
 :root {
-  --main-bg-color: #233830;
-  --main-bg-color-transparent: #2338309c;
-  --secondary-bg-color: #2e483f;
+  --main-bg-color: #1e2a26;
+  --main-bg-color-transparent: #1e2a26c6;
+  --secondary-bg-color: #273731;
   --primary-text-color: #d2e9e1;
   --secondary-text-color: #97cfbb;
   --tertiary-text-color: #619a86;
+  /* --primary-text-color: #e6ffe9;
+  --secondary-text-color: #a3d9c3;
+  --tertiary-text-color: #6b8f88; */
   --input-border-color: #548574;
   --line-color: #548574;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
 /* global styles */
@@ -116,8 +120,8 @@ button:disabled {
 
 .section-header-container::before {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: url("../images/star.svg") no-repeat center;
   background-size: contain;
   margin-right: 10px;
@@ -150,8 +154,9 @@ h3 {
 /* nav menu */
 
 nav {
-  background-color: var(--main-bg-color);
-  /* backdrop-filter: blur(20px) saturate(1.7); */
+  background-color: var(--main-bg-color-transparent);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   position: fixed;
   z-index: 50;
   top: 0px;
@@ -221,7 +226,6 @@ nav {
   max-width: 900px;
 
   @media (min-width: 768px) {
-    /* flex: 1 1 0%; */
     width: 100%;
   }
 }
@@ -231,10 +235,9 @@ nav {
   flex-direction: column;
   top: 0px;
   min-height: 100vh;
-  /* position: sticky; */
 
   @media (min-width: 768px) {
-    height: 100%;
+    height: calc(100vh - 60px);
   }
 }
 
@@ -329,13 +332,15 @@ h2 {
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: white;
+    background-color: var(--secondary-text-color);
   }
-  /* /*  */
-  /* a { */
 
   a {
     padding: 10px;
+
+    svg {
+      color: var(--secondary-text-color);
+    }
 
     &:last-of-type {
       margin-bottom: 20px;
@@ -346,15 +351,10 @@ h2 {
       transform: translateY(-3px);
 
       svg {
-        color: var(--secondary-text-color);
+        color: var(--primary-text-color-text-color);
       }
     }
-    /* 
-    svg {
-
-    } */
   }
-  /* } */
 }
 
 .sidebar-right {
@@ -366,6 +366,7 @@ h2 {
   /* right: ${props => (props.orientation === 'left' ? 'auto' : '40px')}; */
   z-index: 10;
   /* color: var(--light-slate); */
+  font-size: 14px;
 
   @media (max-width: 1080px) {
     left: auto;
@@ -391,12 +392,12 @@ h2 {
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: white;
+    background-color: var(--secondary-text-color);
   }
 
   a {
     margin: 20px auto;
-    color: white;
+    color: var(--tertiary-text-color);
     padding: 10px;
     font-family: var(--font-mono);
     font-size: var(--fz-xxs);
@@ -407,7 +408,7 @@ h2 {
     &:hover,
     &:focus {
       transform: translateY(-3px);
-      color: var(--secondary-text-color);
+      color: var(--primary-text-color);
     }
   }
 }
@@ -436,20 +437,28 @@ h2 {
   flex-direction: column;
   gap: 16px;
   background-color: var(--secondary-bg-color);
-  border-radius: 10px;
+  /* border-radius: 10px; */
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  }
 
   @media (min-width: 768px) {
     padding: 16px;
   }
 }
-
+/* 
 .project-card:hover .project-image {
   opacity: 0.5;
 }
 
 .project-card:hover .project-image-overlay {
   opacity: 1;
-}
+} */
 
 .project-name {
   font-size: 22px;
@@ -469,7 +478,7 @@ h2 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
-
+/* 
 .project-image-overlay {
   position: absolute;
   inset: 0px;
@@ -481,11 +490,11 @@ h2 {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-}
-
+} */
+/* 
 .project-image-overlay-button {
   width: 100px;
-}
+} */
 
 .project-blurb {
   margin-top: -5px;
@@ -500,9 +509,14 @@ h2 {
 .tech-chip {
   background-color: var(--main-bg-color);
   color: var(--secondary-text-color);
+  font-family: var(--font-mono);
   font-size: 14px;
   padding: 4px 12px;
   border-radius: 20px;
+}
+
+.project-link-container {
+  width: 20px;
 }
 
 /* skills */
@@ -592,7 +606,7 @@ h2 {
 
 .review-card {
   background-color: var(--secondary-bg-color);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 22px;
   max-width: 672px;
   display: flex;

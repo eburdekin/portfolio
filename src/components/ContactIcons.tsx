@@ -37,7 +37,6 @@ const ContactIcons = () => {
             <FontAwesomeIcon
               icon={link.icon}
               size="xl"
-              color="white"
               className="contact-icon"
             />
           </a>
