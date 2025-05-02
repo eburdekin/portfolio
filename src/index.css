@@ -220,9 +220,10 @@ nav {
 .hero-container {
   max-width: 900px;
 
-  /* @media (min-width: 768px) {
-    flex: 1 1 0%;
-  } */
+  @media (min-width: 768px) {
+    /* flex: 1 1 0%; */
+    width: 100%;
+  }
 }
 
 .hero {
@@ -231,6 +232,10 @@ nav {
   top: 0px;
   min-height: 100vh;
   /* position: sticky; */
+
+  @media (min-width: 768px) {
+    height: 100%;
+  }
 }
 
 .hero-headers {

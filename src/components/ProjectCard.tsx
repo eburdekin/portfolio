@@ -1,8 +1,9 @@
 import React from "react";
 
 type ProjectCardProps = {
-  children: Iterable<React.ReactNode>;
+  // children: Iterable<React.ReactNode>;
   projectName: string;
+  projectDesc: string;
   image: string;
   link1: string;
   link2: string;
@@ -28,7 +29,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </a>
         </div>
       </div>
-      <div className="project-blurb">{props.children}</div>
+      <div className="project-blurb">{props.projectDesc}</div>
       <div className="tech-chip-container">
         {props.technologies.map((tech) => {
           return (
