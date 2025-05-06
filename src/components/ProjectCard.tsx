@@ -40,7 +40,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           <GithubIcon />
         </a>
         <a href={props.siteLink} target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={faExternalLink} />
+          <FontAwesomeIcon icon={faExternalLink} size="lg" />
         </a>
       </div>
     </div>

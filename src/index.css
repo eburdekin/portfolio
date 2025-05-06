@@ -472,17 +472,21 @@ h2 {
 }
 
 .project-link-container {
-  /* width: 20px; */
   display: flex;
   flex-direction: row;
-  vertical-align: middle;
-  line-height: 18px;
+  align-items: center;
+  line-height: 22.5px;
   gap: 16px;
+
+  svg:hover {
+    color: var(--secondary-text-color);
+  }
 }
 
 .github-icon {
-  height: 20px;
-  width: 20px;
+  display: block;
+  height: 22.5px;
+  width: 22.5px;
 }
 
 /* skills */
