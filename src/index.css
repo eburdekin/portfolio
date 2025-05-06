@@ -80,25 +80,18 @@ button:disabled {
   padding: 0px 18px;
 
   @media (min-width: 768px) {
-    /* flex-direction: row; */
     margin: auto;
-    padding: 0px 60px;
+    padding: 0px 80px;
   }
 }
 
 .sections-container {
-  /* width: 100%; */
   max-width: 900px;
-  /* max-width: 1152px; */
   display: flex;
   flex-direction: column;
   gap: 200px;
   justify-content: center;
   margin-top: 80px;
-
-  /* @media (min-width: 768px) {
-    flex: 1.2 1 0%;
-  } */
 }
 
 .section-header-container {
@@ -116,7 +109,6 @@ button:disabled {
   background-size: contain;
   margin-right: 10px;
   margin-right: 10px;
-  /* font-weight: bold; */
   color: var(--secondary-text-color);
   position: relative;
   bottom: 0;
