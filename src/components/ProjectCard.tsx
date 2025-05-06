@@ -1,11 +1,16 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import GithubIcon from "../icons/githubIcon";
 
 type ProjectCardProps = {
-  children: Iterable<React.ReactNode>;
+  // children: Iterable<React.ReactNode>;
   projectName: string;
+  projectDesc: string;
   image: string;
-  link1: string;
-  link2: string;
+  githubLink: string;
+  siteLink: string;
   technologies: Array<string>;
 };
 
@@ -19,16 +24,8 @@ const ProjectCard = (props: ProjectCardProps) => {
           alt={props.projectName}
           className="project-image"
         />
-        <div className="project-image-overlay">
-          <a href={props.link1} target="_blank" rel="noreferrer">
-            <button className="project-image-overlay-button">Live</button>
-          </a>
-          <a href={props.link2} target="_blank" rel="noreferrer">
-            <button className="project-image-overlay-button">GitHub</button>
-          </a>
-        </div>
       </div>
-      <div className="project-blurb">{props.children}</div>
+      <div className="project-blurb">{props.projectDesc}</div>
       <div className="tech-chip-container">
         {props.technologies.map((tech) => {
           return (
@@ -37,6 +34,14 @@ const ProjectCard = (props: ProjectCardProps) => {
             </span>
           );
         })}
+      </div>
+      <div className="project-link-container">
+        <a href={props.githubLink} target="_blank" rel="noreferrer">
+          <GithubIcon />
+        </a>
+        <a href={props.siteLink} target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faExternalLink} size="lg" />
+        </a>
       </div>
     </div>
   );

@@ -58,7 +58,10 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact">
-      <h2 className="section-header">Let's Connect!</h2>
+      <div className="section-header-container">
+        <h3>Let's Connect!</h3>
+      </div>
+
       <div className="contact-form-container">
         <p className="contact-blurb">
           I am actively exploring new career opportunities and welcome your

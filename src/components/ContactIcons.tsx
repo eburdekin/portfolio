@@ -24,7 +24,7 @@ const ContactIcons = () => {
   ];
 
   return (
-    <div>
+    <>
       {links.map((link) => {
         return (
           <a
@@ -36,14 +36,13 @@ const ContactIcons = () => {
           >
             <FontAwesomeIcon
               icon={link.icon}
-              size="2x"
-              color="#d2e9e1"
-              className="contact-icon hover-effect"
+              size="xl"
+              className="contact-icon"
             />
           </a>
         );
       })}
-    </div>
+    </>
   );
 };
 

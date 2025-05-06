@@ -8,14 +8,11 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-headers">
         <h1>Eileen Burdekin</h1>
-        <h3>Web Developer</h3>
-      </div>
-      <div className="location">
-        <FontAwesomeIcon icon={faLocationDot} size="lg" color="#97cfbb" />
-        <p>Los Angeles, CA</p>
-      </div>
-      <div className="hero-contact-icon-container">
-        <ContactIcons />
+        <h2>Web Developer</h2>
+        <div className="location">
+          <FontAwesomeIcon icon={faLocationDot} size="lg" color="#97cfbb" />
+          <p>Los Angeles, CA</p>
+        </div>
       </div>
     </div>
   );

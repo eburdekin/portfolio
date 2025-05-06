@@ -58,7 +58,9 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h2 className="section-header">Skills</h2>
+      <div className="section-header-container">
+        <h3>Skills</h3>
+      </div>
       <div className="skill-card-container">
         <SkillCards items={atfSkills} />
         <button
