@@ -443,6 +443,7 @@ h2 {
   font-size: 22px;
   color: white;
   text-align: center;
+  color: white;
 }
 
 .project-image-container {
@@ -580,7 +581,7 @@ h2 {
 .review-card {
   background-color: var(--secondary-bg-color);
   padding: 22px;
-  max-width: 672px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   gap: 24px;
