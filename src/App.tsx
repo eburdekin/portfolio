@@ -61,7 +61,7 @@ function App() {
         </div>
         {showBackToTop && (
           <button className="scroll-to-top-button" onClick={scrollToTop}>
-            <FontAwesomeIcon icon={faArrowUp} size="2xl" color="#97cfbb" />
+            <FontAwesomeIcon icon={faArrowUp} size="xl" color="#97cfbb" />
           </button>
         )}
       </div>

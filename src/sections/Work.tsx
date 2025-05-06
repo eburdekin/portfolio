@@ -28,7 +28,6 @@ const Work = () => {
       <div className="section-header-container">
         <h3>Work</h3>
       </div>
-      <h4>Open Source Contributions</h4>
       <div className="project-card-container">
         {projects.map((project) => {
           return <ProjectCard key={project.image} {...project} />;
