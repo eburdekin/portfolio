@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
       });
 
       if (response.ok) {
-        setOnSubmitMessage("Form submitted successfully!");
+        setOnSubmitMessage("Message sent!");
         reset();
       } else {
         setOnSubmitMessage("Form submission failed");
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
     } catch (error) {
       setOnSubmitMessage(
         "An error occurred while submitting the form:" +
-          (error instanceof Error ? error.message : "Unknown error")
+          (error instanceof Error ? error.message : "Unknown error"),
       );
     }
   };

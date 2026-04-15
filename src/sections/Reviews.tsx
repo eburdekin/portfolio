@@ -10,6 +10,34 @@ const Reviews = () => {
       <div className="review-card-container">
         <ReviewCard
           goTo="https://www.linkedin.com/in/eburdekin/"
+          personName="Sydney Walcoff"
+          jobRelation="Former Manager"
+          jobPosition="Developer Lead at Hack for LA"
+        >
+          <p>
+            I had the pleasure of working with Eileen on the Expunge Assist
+            project at Hack for LA, where she consistently impressed me with her
+            technical skills, initiative, and collaborative spirit. As a
+            developer on our team, Eileen brought both creativity and precision
+            to her work—delivering clean, efficient code and thoughtful
+            solutions to complex problems.
+          </p>
+          <p>
+            What stood out most about Eileen was her proactive attitude. She
+            didn’t just wait for tasks to be assigned—she actively looked for
+            ways to improve the user experience, optimize workflows, and support
+            teammates wherever needed. Even in a volunteer setting with limited
+            resources, Eileen approached every challenge with professionalism
+            and enthusiasm.
+          </p>
+          <p>
+            She is a reliable and supportive team member, always open to
+            feedback and eager to learn. I would gladly work with Eileen again,
+            and any team would benefit from her talent and work ethic.
+          </p>
+        </ReviewCard>
+        <ReviewCard
+          goTo="https://www.linkedin.com/in/eburdekin/"
           personName="Kelly Reilly"
           jobRelation="Former Teammate"
           jobPosition="Value Consultant at Google"
